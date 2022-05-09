@@ -3,11 +3,10 @@ dash
 dash_core_components
 dash_html_components
 dash_mantine_components
-dash_loading_spinners
 plotly.express
 pandas
 opencv-python-headless
 numpy 
 matplotlib
 datetime
-psycopg2
+dash_bootstrap_components

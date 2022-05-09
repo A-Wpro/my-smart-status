@@ -1,6 +1,4 @@
 from dash import Dash, dcc, html
-import dash_loading_spinners as dls
-import dash_mantine_components as dmc
 from dash.dependencies import Input, Output, State
 import plotly.express as px
 import pandas as pd

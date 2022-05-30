@@ -66,10 +66,9 @@ app.layout = dbc.Container(
            dbc.Card(
                         dbc.CardBody(
                         [
-                            html.H4("- 2022-05-14", className="card-title"),
+                            html.H4("- 2022-05-30", className="card-title"),
                             html.P(
-                                "My Smart Status just launch !",
-                                
+                                "Dear user, our new app will receive huge improvement in the upcoming month",                                
                                 className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
                             ),
                             
@@ -78,9 +77,9 @@ app.layout = dbc.Container(
             dbc.Card(
                     dbc.CardBody(
                     [
-                        html.H4("- 2022-05-09", className="card-title"),
+                        html.H4("- 2022-05-30", className="card-title"),
                         html.P(
-                            "Here you will be able to have lastest new about offshore",
+                            "My Smart Status just launch !",
                             className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
                         ),
                         
@@ -99,7 +98,7 @@ app.layout = dbc.Container(
                                 style= dict(fontSize = "25px")
                             ),
                             dbc.AccordionItem(
-                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A())],
+                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit", href = "https://permit-to-work-audit.herokuapp.com/))],
                                 title="Usefull link",
                                 style= dict(fontSize = "25px")
                             ),

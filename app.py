@@ -31,15 +31,15 @@ def tip_of_the_week():
     currDate = datetime.datetime.now()
     currDateMonth = currDate.month
     currDateDay =  currDate.day
-    if currDateMonth == 12 and currDateDay > 10 and currDateDay > 25:
+    if currDateMonth == 12 and currDateDay > 10 and currDateDay < 25:
         tip = "Cover yourself, winter is comming"
-    elif currDateMonth == 5 and currDateDay > 1 and currDateDay > 9:
+    elif currDateMonth == 5 and currDateDay > 1 and currDateDay < 9:
         tip = "Don't forget interational mother's day !"
-    elif currDateMonth == 3 and currDateDay > 1 and currDateDay > 9:
+    elif currDateMonth == 3 and currDateDay > 1 and currDateDay < 9:
         tip = "Don't forget interational women's day !"
-    elif currDateMonth == 11 and currDateDay > 11 and currDateDay > 20:
+    elif currDateMonth == 11 and currDateDay > 11 and currDateDay < 20:
         tip = "Don't forget interational men's day !"
-    elif currDateMonth == 6 and currDateDay > 11 and currDateDay > 20:
+    elif currDateMonth == 6 and currDateDay > 11 and currDateDay < 20:
         tip = "Don't forget interational father's day !"
 
 

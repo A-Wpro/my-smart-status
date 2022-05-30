@@ -19,7 +19,7 @@ def tip_of_the_week():
             "Always be careful about H2S !",
             "Stay hydrated !",
             "Don't forget your belongings when going back onshore.",
-            "Are you ofshore certification still valide ?",
+            "Are your offshore certification still valid ?",
             "Avoid screen before going bed.",
             "Smile :)"
 

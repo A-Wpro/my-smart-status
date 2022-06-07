@@ -79,10 +79,7 @@ def icon_renderer(user,offline,wifi,g4,VR = 1):
 ############################################################### FRONT END ###################################################################################################
 '''
 
-html.Img(src=app.get_asset_url('logo.png'), style={ 'width': '248',
-                                                                    'height': '227',
-                                                                     'position': 'relative',
-                                                                      'left': '75%'}),
+html.Img(src=app.get_asset_url('logo.png'), style={}),
                                                                       
 '''
 
@@ -92,7 +89,8 @@ server = app.server
 
 app.layout = dbc.Container(
 [
-      dbc.Alert("TEPDK Industrial Mobility Project", color="dark", style = dict(color = "orange", height = '7vh', fontSize = '46px', marginBottom = '3vh')),
+      #dbc.Alert("TEPDK Industrial Mobility", color="dark", style = dict(color = "#FF6B21", height = '7vh', fontSize = '46px', marginBottom = '3vh')),
+      html.Div([html.Img(src=app.get_asset_url('header.png'), style={"maxWidth": '55vh', "marginBottom": '15px'})]),
       html.Div([#Warning : 
                 dbc.Card(
                     [
@@ -104,7 +102,7 @@ app.layout = dbc.Container(
                                         className="img-fluid rounded-start",
                                         style = dict(minWidth = "-webkit-fill-available")
                                     ),
-                                    className="col-md-4", style = dict(    width = "125px")
+                                    className="col-md-4", style = dict(    width = "110px")
                                 ),
                                 dbc.Col(
                                     dbc.CardBody(
@@ -115,9 +113,9 @@ app.layout = dbc.Container(
                                                 "This includes devices, headsets and earbuds. ",
                                                 
                                                 className="card-text",
-                                                style = dict(fontSize = "22px")
+                                                style = dict(fontSize = "20px")
                                             ),
-                                        ]
+                                        ],style = {"padding": '0rem 0rem'}
                                     ),
                                     className="col-md-8",
                                 ),

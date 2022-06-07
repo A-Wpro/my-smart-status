@@ -53,15 +53,15 @@ def tip_of_the_week():
 def icon_renderer(user,offline,wifi,g4,VR = 1):
     tmp = []
     if type(user) == str:
-        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px"}))
+        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
     elif user == 0 :
-        tmp.append(html.Img(src=app.get_asset_url('all.png'), style={"maxWidth": "51px"}))
+        tmp.append(html.Img(src=app.get_asset_url('all.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
     elif user == 1:
-        tmp.append(html.Img(src=app.get_asset_url('tools.png'), style={"maxWidth": "51px"}))
+        tmp.append(html.Img(src=app.get_asset_url('tools.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
     elif user == 2:
-        tmp.append(html.Img(src=app.get_asset_url('oil.png'), style={"maxWidth": "51px"}))
+        tmp.append(html.Img(src=app.get_asset_url('oil.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
     elif user == 3:
-        tmp.append(html.Img(src=app.get_asset_url('cranes.png'), style={"maxWidth": "51px"}))
+        tmp.append(html.Img(src=app.get_asset_url('cranes.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
     
     if offline == 0:
         tmp.append(html.Img(src=app.get_asset_url('offline.png'), style={"maxWidth": "51px"}))
@@ -92,7 +92,7 @@ server = app.server
 
 app.layout = dbc.Container(
 [
-      dbc.Alert("TEPDK Industrial Mobility Project", color="dark", style = dict(height = '7vh', fontSize = '46px', marginBottom = '3vh')),
+      dbc.Alert("TEPDK Industrial Mobility Project", color="dark", style = dict(color = "orange", height = '7vh', fontSize = '46px', marginBottom = '3vh')),
       html.Div([#Warning : 
                 dbc.Card(
                     [
@@ -147,21 +147,11 @@ app.layout = dbc.Container(
                             className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
                         ),
 
-                    ], style = dict())
+                    ], style = dict()
+                    )
                    ),
-            dbc.Card(
-                    dbc.CardBody(
-                    [
-                        html.H4("- 2022-05-30", className="card-title"),
-                        html.P(
-                            "Dear user, our new app will receive huge improvement in the upcoming month",                                
-                            className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
-                        ),
 
-                    ], style = dict()),
-                    style = dict(marginTop= '1vh')
-                )
-            ])# Mettre un encadrement sur la div
+            ])
         ],style = dict(marginBottom = "20px") 
         ),
     html.Div(       
@@ -169,14 +159,14 @@ app.layout = dbc.Container(
                     dbc.Accordion(
                         [
                             dbc.AccordionItem(
-                                [html.Div(html.P( "● Torben Lauridsen", style = dict(fontSize = "30px",marginLeft = '50px')))],
+                                [html.Div(html.P( "● Torben Lauridsen", style = dict(fontSize = "25px",marginLeft = '50px')))],
                                 title="● Contact : ",
                                 style= dict(fontSize = "25px")
                             ),
                             dbc.AccordionItem(
                                  [
                                  html.Div([html.Div([html.P("● mySafety", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
                                  html.Div([html.Div([html.P("● UBIK for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
                                  html.Div([html.Div([html.P("● UBIK for production operator rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
                                  html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(3,1,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
@@ -189,12 +179,12 @@ app.layout = dbc.Container(
                                 [
                                 html.Div([
                                      html.Div([
-                                         html.P("● UBIK for notifications", style = dict(marginRight = "50px")),
-                                         html.Div(icon_renderer("SAP",-1,-1,-1))
+                                         html.P("● Teams", style = dict(marginRight = "50px")),
+                                         html.Div(icon_renderer("teams",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 
-                                 html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one",
-                                 style= dict(marginLeft = "66px"))]),
+                                 html.P("Microsoft Teams",
+                                 style= dict(marginLeft = "66px"))]), 
                                  
                                 html.Div([
                                      html.Div([
@@ -205,20 +195,20 @@ app.layout = dbc.Container(
                                  html.P("",
                                  style= dict(marginLeft = "66px"))]),
                             
-                                html.Div([
+                                 html.Div([
                                      html.Div([
-                                         html.P("● Teams", style = dict(marginRight = "50px")),
-                                         html.Div(icon_renderer("teams",-1,-1,-1))
+                                         html.P("● UBIK for notifications", style = dict(marginRight = "50px")),
+                                         html.Div(icon_renderer("SAP",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 
-                                 html.P("Microsoft Teams",
-                                 style= dict(marginLeft = "66px"))]), 
+                                 html.P("",
+                                 style= dict(marginLeft = "66px"))]),
                                 ],
                                 title="● Future apps : ",
-                                style= dict(fontSize = "30px")
+                                style= dict(fontSize = "25px")
                             ),
                         ],
-                        start_collapsed=True,
+                        start_collapsed=False,
                         style= dict(fontSize = "25px")
                                 )   
     )),  
@@ -232,7 +222,7 @@ app.layout = dbc.Container(
                                 style= dict(fontSize = "25px")
                             ),
                             dbc.AccordionItem(
-                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit", href = "https://permit-to-work-audit.herokuapp.com/"))],
+                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp"))],
                                 title="Usefull link",
                                 style= dict(fontSize = "25px")
                             ),
@@ -245,7 +235,7 @@ app.layout = dbc.Container(
     style= dict(marginTop = '8vh')
     ),
     html.Div([
-    html.H2("Past messages"),
+    html.H2("Past news"),
         html.Div([
                 dbc.Card(
                         dbc.CardBody(
@@ -261,7 +251,7 @@ app.layout = dbc.Container(
                     )
             ],style = dict()
             )
-    ],style = dict(marginTop = '10vh')),
+    ],style = dict(marginTop = '10vh',marginBottom = '10px')),
 ],
     className="p-5",style= dict(marginTop = '5vh')
 )

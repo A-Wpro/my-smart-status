@@ -50,7 +50,7 @@ def tip_of_the_week():
         tip = random.choice(tips)
     return html.Li(tip)
 
-def icon_renderer(user,offline,wifi,g4):
+def icon_renderer(user,offline,wifi,g4,VR = 1):
     tmp = []
     if type(user) == str:
         return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px"}))
@@ -71,7 +71,8 @@ def icon_renderer(user,offline,wifi,g4):
         
     if g4 == 0:
         tmp.append(html.Img(src=app.get_asset_url('4g.png'), style={"maxWidth": "51px"}))
-        
+    if VR == 0:     
+        tmp.append(html.Img(src=app.get_asset_url('vr-glasses.png'), style={"maxWidth": "51px"}))
     return html.Div(tmp)
     
     
@@ -178,7 +179,7 @@ app.layout = dbc.Container(
                                  html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
                                  html.Div([html.Div([html.P("● UBIK for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
                                  html.Div([html.Div([html.P("● UBIK for production operator rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
-                                 html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(3,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(3,1,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
                                  ],  
                                          
                                 title="● Supported Apps list :",

@@ -90,7 +90,7 @@ server = app.server
 app.layout = dbc.Container(
 [
       #dbc.Alert("TEPDK Industrial Mobility", color="dark", style = dict(color = "#FF6B21", height = '7vh', fontSize = '46px', marginBottom = '3vh')),
-      html.Div([html.Img(src=app.get_asset_url('header.png'), style={"maxWidth": '55vh', "marginBottom": '15px'})]),
+      html.Div([html.Img(src=app.get_asset_url('header.png'), style={"maxWidth": '100%', "marginBottom": '15px'})]),
       html.Div([#Warning : 
                 dbc.Card(
                     [

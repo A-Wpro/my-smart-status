@@ -102,7 +102,7 @@ app.layout = dbc.Container(
                                         className="img-fluid rounded-start",
                                         style = dict(minWidth = "-webkit-fill-available")
                                     ),
-                                    className="col-md-4", style = dict(    width = "110px")
+                                    className="col-md-4", style = dict(    width = "70px")
                                 ),
                                 dbc.Col(
                                     dbc.CardBody(
@@ -113,7 +113,7 @@ app.layout = dbc.Container(
                                                 "This includes devices, headsets and earbuds. ",
                                                 
                                                 className="card-text",
-                                                style = dict(fontSize = "20px")
+                                                style = dict(fontSize = "22px")
                                             ),
                                         ],style = {"padding": '0rem 0rem'}
                                     ),
@@ -251,7 +251,7 @@ app.layout = dbc.Container(
             )
     ],style = dict(marginTop = '10vh',marginBottom = '10px')),
 ],
-    className="p-5",style= dict(marginTop = '5vh')
+    className="p-5",style= dict(marginTop = '1vh')
 )
 
 

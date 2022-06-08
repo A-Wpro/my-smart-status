@@ -22,8 +22,6 @@ def tip_of_the_week():
             "Are your offshore certification still valid ?",
             "Avoid screen before going bed.",
             "Smile :)"
-
-
             ]
 
 
@@ -52,36 +50,35 @@ def tip_of_the_week():
 
 def icon_renderer(user,offline,wifi,g4,VR = 1):
     tmp = []
+    tmp1 = []
     if type(user) == str:
-        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
+        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     elif user == 0 :
-        tmp.append(html.Img(src=app.get_asset_url('all.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
+        tmp.append(html.Img(src=app.get_asset_url('all.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     elif user == 1:
-        tmp.append(html.Img(src=app.get_asset_url('tools.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
+        tmp.append(html.Img(src=app.get_asset_url('tools.png'),style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     elif user == 2:
-        tmp.append(html.Img(src=app.get_asset_url('oil.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
+        tmp.append(html.Img(src=app.get_asset_url('oil.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     elif user == 3:
-        tmp.append(html.Img(src=app.get_asset_url('cranes.png'), style={"maxWidth": "51px", "marginRight": "30px"}))
+        tmp.append(html.Img(src=app.get_asset_url('cranes.png'),style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     
     if offline == 0:
-        tmp.append(html.Img(src=app.get_asset_url('offline.png'), style={"maxWidth": "51px"}))
+        tmp1.append(html.Img(src=app.get_asset_url('offline.png'),style={"maxWidth": "51px", "marginRight": "15px","position" : "relative", "left":"40vw", "top":"0vh"}))
     
     if wifi == 0:
-        tmp.append(html.Img(src=app.get_asset_url('wifi.png'), style={"maxWidth": "51px"}))
+        tmp1.append(html.Img(src=app.get_asset_url('wifi.png'),style={"maxWidth": "51px", "marginRight": "15px","position" : "relative", "left":"40vw", "top":"0vh"}))
         
     if g4 == 0:
-        tmp.append(html.Img(src=app.get_asset_url('4g.png'), style={"maxWidth": "51px"}))
+        tmp1.append(html.Img(src=app.get_asset_url('4g.png'),style={"maxWidth": "51px", "marginRight": "15px","position" : "relative", "left":"40vw", "top":"0vh"}))
+        
     if VR == 0:     
-        tmp.append(html.Img(src=app.get_asset_url('vr-glasses.png'), style={"maxWidth": "51px"}))
-    return html.Div(tmp)
+        tmp1.append(html.Img(src=app.get_asset_url('vr-glasses.png'),style={"maxWidth": "51px", "marginRight": "15px","position" : "relative", "left":"40vw", "top":"0vh"}))
+        
+    return html.Div([tmp[0],html.Div(tmp1,style = {"display":"flex"})],style={"display":"flex","maxHeight": "50px", "position":"inherit","left":"250px"})
     
     
 ############################################################### FRONT END ###################################################################################################
-'''
 
-html.Img(src=app.get_asset_url('logo.png'), style={}),
-                                                                      
-'''
 
 
 app = Dash(__name__)
@@ -89,7 +86,7 @@ server = app.server
 
 app.layout = dbc.Container(
 [
-      #dbc.Alert("TEPDK Industrial Mobility", color="dark", style = dict(color = "#FF6B21", height = '7vh', fontSize = '46px', marginBottom = '3vh')),
+      
       html.Div([html.Img(src=app.get_asset_url('header.png'), style={"maxWidth": '100%', "marginBottom": '15px'})]),
       html.Div([#Warning : 
                 dbc.Card(
@@ -163,11 +160,20 @@ app.layout = dbc.Container(
                             ),
                             dbc.AccordionItem(
                                  [
-                                 html.Div([html.Div([html.P("● mySafety", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● UBIK for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● UBIK for production operator rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
-                                 html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(3,1,0,0,0))], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
+                                 html.Div([
+                                     html.Div([
+                                         html.P("● mySafety", style = dict(marginRight = "50px")),
+                                         html.Div(icon_renderer(0,0,0,0),
+                                         style = {"position":"absolute", "left":"0px"})
+                                     ],
+                                         style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),
+                                     html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one",
+                                            style= dict(marginLeft = "66px"))
+                                 ]),
+                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● UBIK for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● UBIK for production operator rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
+                                 html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,1,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
                                  ],  
                                          
                                 title="● Supported Apps list :",

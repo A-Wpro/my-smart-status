@@ -52,7 +52,7 @@ def icon_renderer(user,offline,wifi,g4,VR = 1):
     tmp = []
     tmp1 = []
     if type(user) == str:
-        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
+        return html.Div(html.Img(src=app.get_asset_url(str(user)+'.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"0px", "top":"0vh"}))
     elif user == 0 :
         tmp.append(html.Img(src=app.get_asset_url('all.png'), style={"maxWidth": "51px", "marginRight": "30px","position" : "relative", "left":"235px", "top":"0vh"}))
     elif user == 1:

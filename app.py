@@ -154,7 +154,14 @@ app.layout = dbc.Container(
                     dbc.Accordion(
                         [
                             dbc.AccordionItem(
-                                [html.Div(html.P( "● Torben Lauridsen", style = dict(fontSize = "25px",marginLeft = '50px')))],
+                                [
+                                    html.Div([
+                                            html.P( "● Torben Lauridsen", style = dict(fontSize = "25px",marginLeft = '50px')),
+                                            html.P( "● Guilhem WIGNERON", style = dict(fontSize = "25px",marginLeft = '50px'))  
+                                        ])
+                                    
+                                ],
+
                                 title="● Contact : ",
                                 style= dict(fontSize = "25px")
                             ),

@@ -1,3 +1,3 @@
 # my-smart-status
 
-webapp for idk nobody red this anyway
+webapp for regrouping all info needed offshore

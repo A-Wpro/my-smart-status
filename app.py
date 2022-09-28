@@ -138,7 +138,7 @@ app.layout = dbc.Container(
                     [
                         html.H4("- 2022-09-28", className="card-title2"),
                         html.P(
-"Have you applied for your Digital Pass? Without it, you cannot access TIM applications and Teams. You have your Digital pass, but you still do not have access to the applications? Please contact: Guilhem WIGNERON to find a solution",
+"Have you applied for your Digital Pass? Without it, you cannot access TIM applications and Teams. Access can be requested via the Service Catalog offering in the WeCare Portal – Digital P@ss. You have your Digital pass, but you still do not have access to the applications? Please contact: Guilhem WIGNERON to find a solution",
                             
                             className="card-text2", style = dict(marginLeft =  '5%', fontSize = '25px')
                         ),
@@ -172,7 +172,7 @@ app.layout = dbc.Container(
                             dbc.AccordionItem(
                                 [
                                     html.Div([
-                                            html.P( "● Torben Lauridsen", style = dict(fontSize = "25px",marginLeft = '50px')),
+                                            html.P( "● Torben LAURIDSEN", style = dict(fontSize = "25px",marginLeft = '50px')),
                                             html.P( "● Guilhem WIGNERON", style = dict(fontSize = "25px",marginLeft = '50px'))  
                                         ])
                                     
@@ -190,13 +190,15 @@ app.layout = dbc.Container(
                                          style = {"position":"absolute", "left":"0px"})
                                      ],
                                          style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),
-                                     html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one",
+                                     html.P("Record your safety observation from the mobile devices. Same application as the desktop-based one. Version Desktop present in Usefull link",
                                             style= dict(marginLeft = "66px"))
                                  ]),
-                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Take pictures, and find them back later on myTIM desktop application",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● UBIK for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
-                                 html.Div([html.Div([html.P("● UBIK for production operator rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
-                                 html.Div([html.Div([html.P("● Viibe / MySupport", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,1,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Remote collaboration/Visio Conference Apps",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● myTIM", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Select your site, share pictures",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● myForms for FLM rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(1,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("FLM rounds",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● myForms for production rounds", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Daily rounds",style= dict(marginLeft = "66px"))]),  
+                                 html.Div([html.Div([html.P("● myForms for Permit to Work", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Safety Compliance Tool",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● myForms for Container Check", style = dict(marginRight = "50px")),html.Div(icon_renderer(2,1,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Control of Containers Onshore.",style= dict(marginLeft = "66px"))]),
+                                 html.Div([html.Div([html.P("● OnSight", style = dict(marginRight = "50px")),html.Div(icon_renderer(0,1,0,0,0),style = {"position":"absolute", "left":"0px"})], style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")),html.P("Augmented Reality Remote Solution. Can be used for video calls and can be connected to Onsight Cube. This ATEX Cube is a secure solution to capture visuals for self-guided work and share content with optical and thermal imaging.",style= dict(marginLeft = "66px"))]),
                                  ],  
                                          
                                 title="● Supported Apps list :",
@@ -215,7 +217,7 @@ app.layout = dbc.Container(
                                  
                                 html.Div([
                                      html.Div([
-                                         html.P("● UBIK for job execution", style = dict(marginRight = "50px")),
+                                         html.P("● UBIK for rounds", style = dict(marginRight = "50px")),
                                          html.Div(icon_renderer("SAP",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 
@@ -225,6 +227,18 @@ app.layout = dbc.Container(
                                  html.Div([
                                      html.Div([
                                          html.P("● UBIK for notifications", style = dict(marginRight = "50px")),
+                                         html.Div(icon_renderer("SAP",-1,-1,-1))
+                                         ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
+                                         ), 
+                                 html.P("",
+                                 style= dict(marginLeft = "66px"))]),
+                                ],
+                                title="● Future apps : ",
+                                style= dict(fontSize = "25px"),
+                                
+                                html.Div([
+                                     html.Div([
+                                         html.P("● Container Condition Control Checklist for offshore", style = dict(marginRight = "50px")),
                                          html.Div(icon_renderer("SAP",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 
@@ -244,11 +258,6 @@ app.layout = dbc.Container(
                     dbc.Accordion(
                         [
                             dbc.AccordionItem(
-                                [html.Div(tip_of_the_week())],
-                                title="Tip of the week ",
-                                style= dict(fontSize = "25px")
-                            ),
-                            dbc.AccordionItem(
                                 [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit",href ="https://permit-to-work-audit.herokuapp.com/")),html.Li(html.A("Safety4All",href ="https://mysafety4all.totalenergies.com/public/localization"))],
                                 title="Usefull link",
                                 style= dict(fontSize = "25px")
@@ -267,9 +276,9 @@ app.layout = dbc.Container(
                 dbc.Card(
                         dbc.CardBody(
                         [
-                            html.H4("- 2022-05-03", className="card-title"),
+                            html.H4("- 2022-09-28", className="card-title"),
                             html.P(
-                                "Hey, we should create a app this amazing web app",
+                                "The project is moving forward. We hope that the tablets will be in your hands soon.",
                                 className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
                             ),
                             

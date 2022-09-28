@@ -132,7 +132,22 @@ app.layout = dbc.Container(
       html.Div([
           html.H2("News"),
           html.Div([
-           dbc.Card(
+              
+               dbc.Card(
+                    dbc.CardBody(
+                    [
+                        html.H4("- 2022-09-28", className="card-title2"),
+                        html.P(
+"Have you applied for your Digital Pass? Without it, you cannot access TIM applications and Teams. You have your Digital pass, but you still do not have access to the applications? Please contact: Guilhem WIGNERON to find a solution",
+                            
+                            className="card-text2", style = dict(marginLeft =  '5%', fontSize = '25px')
+                        ),
+
+                    ], style = dict() 
+                    ) 
+                   ), 
+              
+                dbc.Card(
                     dbc.CardBody(
                     [
                         html.H4("- 2022-06-05", className="card-title"),
@@ -142,11 +157,12 @@ app.layout = dbc.Container(
                             className="card-text", style = dict(marginLeft =  '5%', fontSize = '25px')
                         ),
 
-                    ], style = dict()
-                    )
-                   ),
+                    ], style = dict() 
+                    ) 
+                   ), 
 
             ])
+          
         ],style = dict(marginBottom = "20px") 
         ),
     html.Div(       

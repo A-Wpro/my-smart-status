@@ -255,11 +255,6 @@ app.layout = dbc.Container(
                     dbc.Accordion(
                         [
                             dbc.AccordionItem(
-                                [html.Div(tip_of_the_week())],
-                                title="Tip of the week ",
-                                style= dict(fontSize = "25px")
-                            ),
-                            dbc.AccordionItem(
                                 [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit",href ="https://permit-to-work-audit.herokuapp.com/")),html.Li(html.A("Safety4All",href ="https://mysafety4all.totalenergies.com/public/localization"))],
                                 title="Usefull link",
                                 style= dict(fontSize = "25px")

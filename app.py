@@ -138,7 +138,7 @@ app.layout = dbc.Container(
                     [
                         html.H4("- 2022-09-28", className="card-title2"),
                         html.P(
-"Have you applied for your Digital Pass? Without it, you cannot access TIM applications and Teams. Access can be requested via the Service Catalog offering in the WeCare Portal – Digital Pass. You have your Digital pass, but you still do not have access to the applications? Please contact: Guilhem WIGNERON to find a solution",
+"Have you applied for your Digital Pass? Without it, you cannot access TIM applications and Teams. Access can be requested via the Service Catalog offering in the WeCare Portal – Digital Pass. You have your Digital pass, but you still do not have access to the applications? Please contact: Guilhem WIGNERON to find a solution.",
                             
                             className="card-text2", style = dict(marginLeft =  '5%', fontSize = '25px')
                         ),
@@ -223,22 +223,19 @@ app.layout = dbc.Container(
                                          ), 
                                  html.P("",
                                  style= dict(marginLeft = "66px"))]),
-                            
-                                 html.Div([
+                                    
+                                html.Div([
                                      html.Div([
-                                         html.P("● UBIK for notifications", style = dict(marginRight = "50px")),
+                                         html.P("● Container Condition Control Checklist for offshore", style = dict(marginRight = "50px")),
                                          html.Div(icon_renderer("SAP",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 
                                  html.P("",
                                  style= dict(marginLeft = "66px"))]),
-                                ],
-                                title="● Future apps : ",
-                                style= dict(fontSize = "25px"),
-                                
-                                html.Div([
+                                    
+                                 html.Div([
                                      html.Div([
-                                         html.P("● Container Condition Control Checklist for offshore", style = dict(marginRight = "50px")),
+                                         html.P("● UBIK for notifications", style = dict(marginRight = "50px")),
                                          html.Div(icon_renderer("SAP",-1,-1,-1))
                                          ],style = dict(display = 'inline-flex', flexDirection= 'row', marginBottom ="5px")
                                          ), 

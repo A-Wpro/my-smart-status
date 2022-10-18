@@ -255,7 +255,7 @@ app.layout = dbc.Container(
                     dbc.Accordion(
                         [
                             dbc.AccordionItem(
-                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit",href ="https://permit-to-work-audit.herokuapp.com/")),html.Li(html.A("Safety4All",href ="https://mysafety4all.totalenergies.com/public/localization"))],
+                                [html.Li(html.A("WE CARE",href = "https://itsm.hubtotal.net/sp")),html.Li(html.A("Permit to work audit",href ="https://permit-to-work-audit.herokuapp.com/")),html.Li(html.A("Quantum",href = "https://tepdktotp.dashboard.imav.connect.aveva.com/#/")),html.Li(html.A("Bureau Veritas Prod",href = "https://bvcompliance.bureauveritas.com")),html.Li(html.A("Bureau Veritas Pre-prod",href = "https://bvcompliance-ppr.bureauveritas.com")),html.Li(html.A("MyPR",href ="http://tepdk-mypr.main.glb.corp.local/")),html.Li(html.A("Safety4All",href ="https://mysafety4all.totalenergies.com/public/localization"))],
                                 title="Usefull link",
                                 style= dict(fontSize = "25px")
                             ),
